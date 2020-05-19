@@ -47,7 +47,7 @@ applications:
 
 infrastructure:
   connectivity:
-    green_host:
+    green_host: green-wordpress.adoc.com
     virtual_network:
        id: vpc-0cbce464866b2013f
        subnets:

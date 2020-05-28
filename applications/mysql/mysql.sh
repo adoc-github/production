@@ -23,7 +23,7 @@ echo "****************************************************************"
 echo "Installing MYSQL"
 echo "****************************************************************"
 apt-get install mysql-server -y
-apt-get install mysql-client -y
+#apt-get install mysql-client -y
 
 
 echo "****************************************************************"
@@ -53,7 +53,6 @@ echo "Configuring Remote Connection Access"
 echo "****************************************************************"
 # updating sql config to not bind to a specific address
 sed -i 's/bind-address/#bind-address/g' /etc/mysql/mysql.conf.d/mysqld.cnf
-systemctl restart mysql.service
 
 # granting db access
 mysql --defaults-extra-file=/home/pk/my.cnf << EOF

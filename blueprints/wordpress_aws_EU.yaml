@@ -44,3 +44,15 @@ applications:
       # only when the database is ready
       depends_on:
         - mysql
+
+infrastructure:
+  connectivity:
+    green_host: green-wordpress.test.com
+    virtual_network:
+       id: vpc-0cbce464866b2013f
+       subnets:
+         management:
+          - subnet-0dd974165b7924746
+         application:
+           - subnet-026ea8ffca82242ef
+           - subnet-0d1119efcc20c8221

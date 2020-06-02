@@ -5,8 +5,8 @@ kind: blueprint
 metadata:
   description: Production environment of LAMP WordPress stack (Linux, Apache, MySQL, PHP)
 
-clouds:
-  - aws: ap-northeast-1
+#clouds:
+#  - aws: ap-northeast-1
 
 # These are the blueprint parameters and their default values.
 # The values can be changed when creating a sandbox based on this
@@ -24,6 +24,9 @@ inputs:
 
 artifacts:
   - wordpress: wordpress-5.4.1.tar.gz
+
+clouds:
+  - aws: ap-northeast-1
 
 # These are the applications that will be deployed in this blueprint
 applications:

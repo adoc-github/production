@@ -22,6 +22,9 @@ inputs:
       description: VM Hardware Profile for AWS
       default_value: t2.micro
 
+artifacts:
+  - wordpress: wordpress-5.3.3.tar.gz
+
 # These are the applications that will be deployed in this blueprint
 applications:
   - mysql:  # One instance of mysql (see: applications/mysql/mysql.yaml)

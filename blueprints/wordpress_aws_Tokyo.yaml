@@ -24,8 +24,7 @@ inputs:
 
 artifacts:
   - wordpress: wordpress-5.3.3.tar.gz
-  - advanced-app: advanced-app.tar.gz
-  - basic-app: basic-app.tar.gz
+  - mysql: mysql.tar.gz
 
 # These are the applications that will be deployed in this blueprint
 applications:
@@ -49,20 +48,6 @@ applications:
       # only when the database is ready
       depends_on:
         - mysql
-  - advanced-app:  # One instance of mysql (see: applications/advanced-app/advanced-app.yaml)
-      input_values:
-        - DB_USER: $DB_USER
-        - DB_PASS: $DB_PASS
-        - DB_NAME: $DB_NAME
-        - AWS_Instance_Type: $AWS_Type
-        - VM_Type: Standard_A2
-  - basic-app:  # One instance of mysql (see: applications/basic-app/basic-app.yaml)
-      input_values:
-        - DB_USER: $DB_USER
-        - DB_PASS: $DB_PASS
-        - DB_NAME: $DB_NAME
-        - AWS_Instance_Type: $AWS_Type
-        - VM_Type: Standard_A2
 
 infrastructure:
   connectivity:

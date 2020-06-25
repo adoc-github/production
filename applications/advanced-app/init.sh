@@ -12,9 +12,11 @@ apt-get update -y
 
 
 echo "Installing Apache"
-if cd $ ARTIFACTS_PATH; 
-tar -xvf demoapp-server.tar.gz;
-else apt-get install apache2 apache2-utils -y
+if
+    cd $ ARTIFACTS_PATH; 
+    tar -xvf advanced-app.tar.gz;
+else
+    apt-get install apache2 apache2-utils -y
 fi
 systemctl enable apache2
 

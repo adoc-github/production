@@ -24,8 +24,8 @@ inputs:
 
 artifacts:
   - wordpress: wordpress-5.3.3.tar.gz
-  - demoapp-server: demoapp-server/production/demoapp-server.tar.gz
-  - demoapp-client: demoapp-client/production/demoapp-client.tar.gz
+  - advanced-app: advanced-app.tar.gz
+  - basic-app: basic-app.tar.gz
 
 # These are the applications that will be deployed in this blueprint
 applications:

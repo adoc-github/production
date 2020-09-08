@@ -59,4 +59,4 @@ infrastructure:
          management:
           - mng_subnet
          application:
-           - app_subnet
+          - app_subnet

@@ -50,7 +50,7 @@ applications:
 
 infrastructure:
   connectivity:
-    green_host: ...
+    green_host: green-wordpress.adoc.com
     virtual_network:
        id: infra_rg/prod_vnet
        subnets:

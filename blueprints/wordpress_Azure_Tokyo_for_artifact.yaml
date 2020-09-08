@@ -47,3 +47,16 @@ applications:
       # only when the database is ready
       depends_on:
         - mysql
+
+infrastructure:
+  connectivity:
+    green_host: ...
+    virtual_network:
+       id: infra_rg/prod_vnet
+       subnets:
+         gateway:
+          - ag_subnet
+         management:
+          - mng_subnet
+         application:
+           - app_subnet

@@ -6,7 +6,7 @@ metadata:
   description: LAMP WordPress stack (Linux, Apache, MySQL, PHP)
 
 clouds:
-  - azure: westeurope
+  - azure: japaneast
 
 # These are the blueprint parameters and their default values.
 # The values can be changed when creating a sandbox based on this
@@ -20,7 +20,7 @@ inputs:
   - DB_NAME: wordpress_demo  # DB_NAME - a target database name
   - VM_Type:
       description: VM Hardware Profile to use for Azure Deployment
-      default_value: Standard_B1s
+      default_value: Standard_B1ms
 
 # These are the applications that will be deployed in this blueprint
 applications:
@@ -44,3 +44,16 @@ applications:
       # only when the database is ready
       depends_on:
         - mysql
+
+infrastructure:
+  connectivity:
+    green_host: green-wordpress.adoc.com
+    virtual_network:
+       id: infra_rg/prod_vnet
+       subnets:
+         gateway:
+          - ag_subnet
+         management:
+          - mng_subnet
+         application:
+          - app_subnet

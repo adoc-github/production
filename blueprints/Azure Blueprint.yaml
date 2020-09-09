@@ -23,3 +23,15 @@ applications:
   - basic-app:
       instances: 1
 
+infrastructure:
+  connectivity:
+    green_host: green-wordpress.adoc.com
+    virtual_network:
+       id: infra_rg/prod_vnet
+       subnets:
+         gateway:
+          - ag_subnet
+         management:
+          - mng_subnet
+         application:
+          - app_subnet

@@ -13,7 +13,7 @@ metadata:
 
 
 clouds:
-  - azure: westus
+  - azure: japaneast
 
 inputs:
   - advanced_app_port: 1234

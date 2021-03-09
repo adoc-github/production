@@ -23,7 +23,7 @@ inputs:
       default_value: t2.micro
 
 artifacts:
-  - wordpress: wordpress-5.3.3.tar.gz
+  - wordpress: wordpress-5.6.2.tar.gz
   - mysql: mysql.tar.gz
 
 # These are the applications that will be deployed in this blueprint

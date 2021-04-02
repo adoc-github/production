@@ -5,11 +5,11 @@ source:
   os_type: linux
   image:
     ami:                                                   # AWS Image
-      - id: ami-f90a4880
+      - id: ami-06fd78dc2f0b69910
         region: eu-west-1
         username: ubuntu
     azure_image:                                           # Azure Image
-      - urn: Canonical:UbuntuServer:16.04-LTS:latest
+      - urn: Canonical:UbuntuServer:18.04-LTS:latest
         username: adminuser
 
 inputs:
